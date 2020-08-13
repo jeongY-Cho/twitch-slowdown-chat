@@ -233,7 +233,7 @@ const LandingPage: React.FC = () => {
       <div className="jumbotron" style={{ marginBottom: 50 }}>
         <h1>Twitch Chat Counter</h1>
         <p>
-          This simple app that groups similar chat messages and counts the
+          This is a simple app that groups similar chat messages and counts the
           number of chat messages over some distinct length of time.
         </p>
         <p>
