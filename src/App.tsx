@@ -17,7 +17,7 @@ class App extends React.Component<{}, IAppState> {
   client: ChatClient | undefined;
   state: IAppState = {
     accessParms: {},
-    msgs: [],
+    msgs: [["Connect to a channel on the left", 1]],
     sensitivity: 0.2,
     timeSpan: 30,
     showTop: 20,
@@ -226,23 +226,23 @@ const LandingPage: React.FC = () => {
         width: "100vw",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <div className="jumbotron">
+      <div className="jumbotron" style={{ marginBottom: 50 }}>
         <h1>Twitch Chat Counter</h1>
         <p>
-          This simple app fuzzy matches and counts the number of chat messages
-          over some distinct length of time.
+          This simple app that groups similar chat messages and counts the
+          number of chat messages over some distinct length of time.
         </p>
         <p>
           Use it to quickly poll for opinions of twitch chat or ask twitch chat
-          to pick
+          to pick from choices without resulting to strawpoll.
         </p>
         <p>
-          Example: <br /> Streamer: "Ok, Twitch Chat. type 1 for League of
-          Legends or type 2 for Valorant."
+          Example: <br /> Streamer: "Ok, Twitch Chat. Type '1' for League of
+          Legends or type '2' for Valorant."
         </p>
       </div>
       <div>
@@ -255,7 +255,7 @@ const LandingPage: React.FC = () => {
             borderRadius: 10,
           }}
         >
-          Login with Twitch to see chat
+          Login with Twitch to count chat
         </a>
       </div>
     </div>

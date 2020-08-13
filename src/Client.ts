@@ -32,7 +32,6 @@ class MessageLedger {
   ) {}
 
   add(str: string) {
-    let ogStr = str.slice();
     if (str === "") return;
 
     // match str to something in dict
@@ -90,7 +89,7 @@ class MessageLedger {
   }
 
   changeThreshold(threshold: number) {
-    if (threshold == this.threshold) {
+    if (threshold === this.threshold) {
       return;
     }
     this.threshold = threshold;
